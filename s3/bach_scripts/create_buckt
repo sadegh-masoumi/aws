@@ -1,0 +1,16 @@
+### Shebang 
+#!/bin/bash
+
+# exit immediately if a command exits with a non-zero status
+set -e
+
+if [ -z "$1" ]; then
+  echo "Usage: $0 <bucket-name>"
+  exit 1
+fi
+
+echo "Creating bucket: $1"
+
+aws s3api create-bucket --bucket "$1" --region us-east-1 --output text --query 'Location'
+
+# create-bucket-configuration LocationConstraint=us-east-1
