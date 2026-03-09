@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo ="Deploying CloudFormation stack: s3-iac-cnf"
+aws cloudformation deploy \
+    --template-file s3-iac-cnf.yaml \
+    --stack-name s3-iac-cnf \
+    --no-execute-changeset \
+    --capabilities CAPABILITY_NAMED_IAM
