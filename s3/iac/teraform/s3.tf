@@ -11,11 +11,11 @@ provider "aws" {
   # Configuration options
 }
 
-resource "aws_s3_bucket" "example" {
-  bucket = "my-tf-test-bucket"
+resource "aws_s3_bucket" "my_terraform_bucket_12871" {
+  bucket = "my-terraform-bucket-12871"
 
   tags = {
-    Name        = "My bucket"
+    Name        = "my-terraform_bucket-12871"
     Environment = "Dev"
   }
 }
